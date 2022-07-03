@@ -1,21 +1,15 @@
-package al.sda.finalproject.bakeoff.entity;
+package al.sda.finalproject.bakeoff.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.persistence.*;
-
-@Entity
-@Table(name = "product_category")
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class ProductCategoryEntity {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class ProductCategoryDTO {
     private Long id;
     private String categoryName;
 }

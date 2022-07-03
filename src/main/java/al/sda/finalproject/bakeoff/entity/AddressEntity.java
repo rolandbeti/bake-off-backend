@@ -8,7 +8,7 @@ public class AddressEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String state;
+    private String country;
     private String city;
     private String street;
     @Column(name = "postal_code")

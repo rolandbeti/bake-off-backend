@@ -11,5 +11,6 @@ public class AccountEntity {
     private String username;
     private String password;
     @ManyToOne
-    private AccountRoleEntity role;
+    @JoinColumn(name = "role_id")
+    private RoleEntity role;
 }

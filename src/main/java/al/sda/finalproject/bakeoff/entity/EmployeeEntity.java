@@ -1,19 +1,19 @@
 package al.sda.finalproject.bakeoff.entity;
 
 import javax.persistence.*;
+import java.util.Date;
 
 @Entity
-@Table(name = "customer")
-public class CustomerEntity {
+@Table(name = "employee")
+public class EmployeeEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String firstName;
     private String lastName;
-    @ManyToOne
-    private AddressEntity address;
-    private String email;
+    private String position;
+    private double wage;
+    private Date startDate;
     @OneToOne
-    @JoinColumn(name = "account_id")
     private AccountEntity account;
 }

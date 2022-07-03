@@ -1,7 +1,6 @@
 package al.sda.finalproject.bakeoff.entity;
 
 import javax.persistence.*;
-import java.util.Date;
 
 @Entity
 @Table(name = "product")
@@ -10,6 +9,9 @@ public class ProductEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    private Date orderDate;
-
+    private double price;
+    @ManyToOne
+    private ProductCategoryEntity category;
+    private String description;
+    private String imageUrl;
 }

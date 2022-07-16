@@ -1,22 +1,19 @@
 package al.sda.finalproject.bakeoff.dto;
 
-
-import al.sda.finalproject.bakeoff.entity.AuthorityEntity;
+import al.sda.finalproject.bakeoff.entity.RoleEntity;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.util.List;
 
-@Getter
 @Setter
+@Getter
 @AllArgsConstructor
 @NoArgsConstructor
-public class RoleDTO {
-
+public class AccountDTO {
     private Long id;
-    private String roleName;
-    private List<AuthorityDTO> authorities;
-
+    private String username;
+    private String password;
+    private RoleDTO role;
 }

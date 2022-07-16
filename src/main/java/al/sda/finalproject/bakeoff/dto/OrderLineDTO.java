@@ -1,22 +1,20 @@
 package al.sda.finalproject.bakeoff.dto;
 
-
-import al.sda.finalproject.bakeoff.entity.AuthorityEntity;
+import al.sda.finalproject.bakeoff.entity.ProductEntity;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.util.List;
 
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class RoleDTO {
+public class OrderLineDTO {
 
     private Long id;
-    private String roleName;
-    private List<AuthorityDTO> authorities;
-
+    private ProductDTO product;
+    private int quantity;
+    private double lineAmount;
 }

@@ -7,9 +7,10 @@ import al.sda.finalproject.bakeoff.entity.ProductEntity;
 import al.sda.finalproject.bakeoff.entity.RoleEntity;
 import al.sda.finalproject.bakeoff.repository.RoleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
-
+@Component
 public class RoleDAOImpl implements RoleDAO {
 
     private RoleRepository roleRepository;

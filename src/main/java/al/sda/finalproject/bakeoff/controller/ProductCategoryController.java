@@ -26,7 +26,7 @@ public class ProductCategoryController {
         this.productCategoryService.save(productCategoryDTO);
         return new ResponseEntity<>(HttpStatus.OK);
     }
-
+    @CrossOrigin("http://localhost:4200")
     @GetMapping("/categories")
     public ResponseEntity<List<ProductCategoryDTO>>getAllCategories(){
         return new ResponseEntity<>(this.productCategoryService.findAll(),HttpStatus.OK);

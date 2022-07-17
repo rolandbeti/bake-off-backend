@@ -4,10 +4,10 @@ import al.sda.finalproject.bakeoff.dao.RoleDAO;
 import al.sda.finalproject.bakeoff.dto.RoleDTO;
 import al.sda.finalproject.bakeoff.service.RoleService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
-import javax.management.relation.Role;
 import java.util.List;
-
+@Service
 public class RoleServiceImpl implements RoleService {
 
     private RoleDAO roleDAO;

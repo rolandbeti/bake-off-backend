@@ -52,7 +52,7 @@ public class OrderLineDAOImpl implements OrderLineDAO {
         orderLineEntity.setId(orderLineDTO.getId());
         orderLineEntity.setProduct(ProductDAOImpl.mapToEntity(orderLineDTO.getProduct()) );
         orderLineEntity.setQuantity(orderLineDTO.getQuantity());
-        orderLineEntity.setOrderEntity(OrderDAOImpl.mapToEntity(orderLineDTO.getOrder()));
+        orderLineEntity.setOrder(OrderDAOImpl.mapToEntity(orderLineDTO.getOrder()));
         return orderLineEntity;
     }
 
@@ -62,7 +62,7 @@ public class OrderLineDAOImpl implements OrderLineDAO {
         orderLineDTO.setProduct(ProductDAOImpl.mapToDTO(orderLineEntity.getProduct()));
         orderLineDTO.setId(orderLineEntity.getId());
         orderLineDTO.setQuantity(orderLineEntity.getQuantity());
-        orderLineDTO.setOrder(OrderDAOImpl.mapToDTO(orderLineEntity.getOrderEntity()));
+        orderLineDTO.setOrder(OrderDAOImpl.mapToDTO(orderLineEntity.getOrder()));
         return orderLineDTO;
     }
 }

@@ -1,6 +1,7 @@
 package al.sda.finalproject.bakeoff.dto;
 
 import al.sda.finalproject.bakeoff.entity.CustomerEntity;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -18,5 +19,7 @@ public class OrderDTO {
     private Date orderDate;
     private CustomerEntity customer;
     private double totalAmount;
+    private List<OrderLineDTO>orderLines;
+    private String status;
 
 }

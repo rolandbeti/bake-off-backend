@@ -48,6 +48,8 @@ public class OrderDAOImpl implements OrderDAO {
         orderEntity.setId(orderDTO.getId());
         orderEntity.setCustomer(orderDTO.getCustomer());
         orderEntity.setTotalAmount(orderDTO.getTotalAmount());
+        orderEntity.setOrderLines(orderDTO.getOrderLines().stream().map(OrderLineDAOImpl::mapToEntity).toList());
+        orderEntity.setStatus(orderDTO.getStatus());
         return orderEntity;
     }
 
@@ -57,6 +59,8 @@ public class OrderDAOImpl implements OrderDAO {
         orderDTO.setCustomer(orderEntity.getCustomer());
         orderDTO.setId(orderEntity.getId());
         orderDTO.setTotalAmount(orderEntity.getTotalAmount());
+        orderDTO.setStatus(orderEntity.getStatus());
+        orderDTO.setOrderLines(orderEntity.getOrderLines().stream().map(OrderLineDAOImpl::mapToDTO).toList());
         return orderDTO;
     }
 }

@@ -24,5 +24,5 @@ public class OrderLineEntity {
     private double lineAmount;
     @ManyToOne
     @JoinColumn(name = "order_id")
-    private OrderEntity orderEntity;
+    private OrderEntity order;
 }

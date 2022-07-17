@@ -1,0 +1,73 @@
+<div class="container form-container">
+  <h1>Add new Product</h1>
+</div>
+
+<mat-divider></mat-divider>
+<div class="container form-container" [formGroup]="form">
+  <mat-form-field>
+    <input matInput placeholder="Name" type="text" formControlName="name" />
+    <!-- <mat-hint align="end">/ 60</mat-hint> -->
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Product description</mat-label>
+    <textarea
+      matInput
+      placeholder="Description..."
+      formControlName="description"
+    ></textarea>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Price" type="number" formControlName="price" />
+    <!-- <mat-hint align="end">/ 60</mat-hint> -->
+  </mat-form-field>
+  <!-- <div class="col-8">
+    <input
+      class="form-control form-control-sm"
+      id="formFileSm"
+      type="file"
+      (change)="selectFile($event)"
+    />
+    <br />
+    <label class="btn btn-default p-0"> </label>
+  </div>
+
+  <div class="col-4">
+    <button
+      class="btn btn-danger btn-sm"
+      [disabled]="!selectedFiles"
+      (click)="upload()"
+    >
+      Upload file
+    </button>
+  </div> -->
+  <mat-form-field>
+    <mat-label>Category</mat-label>
+    <mat-select formControlName="category">
+      <mat-option>None</mat-option>
+      <mat-option *ngFor="let category of categories" [value]="category">{{
+        category.categoryName
+      }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <!-- <mat-form-field>
+    <input matInput placeholder="Start Date" [matDatepicker]="startAtPicker" />
+    <mat-datepicker-toggle
+      matSuffix
+      [for]="startAtPicker"
+    ></mat-datepicker-toggle>
+    <mat-datepicker #startAtPicker> </mat-datepicker>
+  </mat-form-field> -->
+  <!-- <div class="radio-group">
+    <mat-radio-group class="card-type" aria-placeholder="Card Type" matSuffix>
+      <br />
+      Card Type
+      <mat-radio-button value="fibonacci" matSuffix class="radio-button"
+        >Fibonacci</mat-radio-button
+      >
+      <mat-radio-button value="tshirt">T-shirt</mat-radio-button>
+    </mat-radio-group>
+  </div> -->
+  <button mat-raised-button color="primary" class="mt-5" (click)="addProduct()">
+    Add Product
+  </button>
+</div>

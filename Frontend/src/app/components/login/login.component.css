@@ -1,0 +1,30 @@
+.login-form {
+  margin-top: 20%;
+}
+/* button {
+  background-color: azure;
+  color: #05164d;
+}
+button:hover {
+  background-color: #05164d;
+  color: white;
+} */
+.login-container {
+  /* margin-top: 45%;
+  margin-left: auto; */
+  margin-top: 25%;
+  margin-left: 25%;
+}
+mat-form-field {
+  width: 50%;
+}
+button {
+  width: 50%;
+}
+.hide-icon {
+  transform: scale(1.4);
+}
+mat-icon {
+  font-size: 50px;
+  height: 20px;
+}

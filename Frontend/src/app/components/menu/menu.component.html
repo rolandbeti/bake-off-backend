@@ -1,0 +1,33 @@
+<mat-sidenav-container fullscreen>
+  <mat-toolbar color="primary">
+    <a mat-button class="mat-button">Bake Off</a>
+    <a mat-button routerLink="/profile" class="mat-button"
+      ><mat-icon>home</mat-icon>
+    </a>
+
+    <a mat-button class="mat-button"
+      ><mat-icon>person_outline</mat-icon>Profile
+    </a>
+    <a mat-button routerLink="/users" class="mat-button">
+      <mat-icon>supervisor_account</mat-icon>Customers
+    </a>
+    <a mat-button routerLink="/products" class="mat-button"> Products </a>
+    <a mat-button routerLink="/categories" class="mat-button">
+      <i class="fa fa-users" aria-hidden="true"></i>
+      Categories
+    </a>
+    <span class="example-spacer"></span>
+
+    <a mat-button routerLink="/login" class="mat-button" matSuffix>
+      <mat-icon>account_circle</mat-icon>
+      Login
+    </a>
+    <a mat-button class="mat-button" routerLink="/"
+      ><mat-icon>exit_to_app</mat-icon>Logout
+    </a>
+  </mat-toolbar>
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
+  <app-footer></app-footer>
+</mat-sidenav-container>

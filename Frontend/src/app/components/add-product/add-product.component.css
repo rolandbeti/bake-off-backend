@@ -1,0 +1,31 @@
+mat-form-field {
+  width: 60%;
+}
+mat-option {
+  margin-left: 5px;
+  padding-left: 10px;
+}
+.radio-button {
+  margin-right: 30px;
+  margin-left: 30px;
+}
+expansion-form {
+  width: 100%;
+}
+mat-card {
+  width: 99%;
+}
+.form-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 5%;
+}
+/* .radio-group {
+  display: flex;
+  justify-content: start;
+} */
+mat-radio-group {
+  width: 60%;
+}

@@ -1,0 +1,72 @@
+<div class="div mt-5 container table-container">
+  <h1>Products</h1>
+  <hr />
+
+  <div class="container table">
+    <div
+      class="spinner-container d-flex justify-content-center mt-5"
+      *ngIf="loading"
+    >
+      <mat-spinner></mat-spinner>
+    </div>
+    <table
+      mat-table
+      class="mat-elevation-z5 users-table"
+      [dataSource]="products"
+      *ngIf="!loading"
+      matSort
+    >
+      <ng-container matColumnDef="image">
+        <th mat-header-cell *matHeaderCellDef>Image</th>
+        <td mat-cell *matCellDef="let product">
+          <img src="{{ product.imageUrl }}" alt="" />
+        </td>
+      </ng-container>
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Product Name</th>
+        <td mat-cell *matCellDef="let product">{{ product.name }}</td>
+      </ng-container>
+      <ng-container matColumnDef="price">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Price</th>
+        <td mat-cell *matCellDef="let product">{{ product.price }}</td>
+      </ng-container>
+      <ng-container matColumnDef="category">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Category</th>
+        <td mat-cell *matCellDef="let product">
+          {{ product.category.categoryName }}
+        </td>
+      </ng-container>
+      <ng-container matColumnDef="Action">
+        <th mat-header-cell *matHeaderCellDef>Action</th>
+        <td mat-cell *matCellDef="let product">
+          <button
+            mat-icon-button
+            color="warn"
+            aria-label="Example icon button with a home icon"
+            (click)="deleteProduct(product.id)"
+          >
+            <mat-icon>delete</mat-icon>
+          </button>
+          <button
+            mat-icon-button
+            class="edit-icon"
+            aria-label="Example icon button with a home icon"
+            (click)="handleUpdate(product)"
+          >
+            <mat-icon>edit</mat-icon>
+          </button>
+        </td>
+      </ng-container>
+      <tr mat-header-row *matHeaderRowDef="displayColumns"></tr>
+      <tr mat-row *matRowDef="let user; columns: displayColumns"></tr>
+    </table>
+    <button
+      mat-raised-button
+      color="primary"
+      class="mt-3"
+      routerLink="/products/add"
+    >
+      Add new
+    </button>
+  </div>
+</div>

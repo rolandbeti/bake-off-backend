@@ -1,0 +1,28 @@
+<mat-accordion>
+  <mat-expansion-panel hideToggle *ngFor="let order of orders">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        {{ order.customer.firstName }} {{ order.customer.lastName }}
+      </mat-panel-title>
+      <mat-panel-description>
+        <div class="d-flex justify-content-center">
+          {{ order.orderDate }}
+          {{ order.totalAmount }}
+          {{ order.status }}
+        </div>
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <p>This is the primary content of the panel.</p>
+    <mat-expansion-panel hideToggle *ngFor="let orderLine of order.orderLines">
+      <mat-expansion-panel-header>
+        <mat-panel-title> {{ orderLine.product }} </mat-panel-title>
+        <mat-panel-description>
+          <div class="d-flex justify-content-center">
+            {{ orderLine.quantity }}
+            {{ orderLine.lineAmount }}
+          </div>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+    </mat-expansion-panel>
+  </mat-expansion-panel>
+</mat-accordion>

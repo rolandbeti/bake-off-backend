@@ -1,13 +1,13 @@
 package al.sda.finalproject.bakeoff.service.impl;
 
-import al.sda.finalproject.bakeoff.dao.OrderDAO;
 import al.sda.finalproject.bakeoff.dao.OrderLineDAO;
 import al.sda.finalproject.bakeoff.dto.OrderLineDTO;
 import al.sda.finalproject.bakeoff.service.OrderLineService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+@Service
 public class OrderLineServiceImpl implements OrderLineService {
 
     private OrderLineDAO orderLineDAO;

@@ -40,7 +40,7 @@ public class AddressController {
     }
 
     @PostMapping("/address")
-    public ResponseEntity<Void>addProduct(@RequestBody AddressDTO addressDTO){
+    public ResponseEntity<Void>addAddress(@RequestBody AddressDTO addressDTO){
         this.addressService.save(addressDTO);
         return new ResponseEntity<>(HttpStatus.OK);
     }

@@ -22,8 +22,7 @@ public class AddressDAOImpl implements AddressDAO {
         this.addressRepository = addressRepository;
     }
 
-    public static AddressEntity mapToDTO(String email) {
-    }
+
 
     @Override
     public List<AddressDTO> findAll() {

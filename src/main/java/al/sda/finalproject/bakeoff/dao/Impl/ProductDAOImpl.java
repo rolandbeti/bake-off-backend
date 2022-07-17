@@ -57,11 +57,11 @@ public class ProductDAOImpl implements ProductDAO {
     public static ProductDTO mapToDTO(ProductEntity productEntity){
         ProductDTO productDTO = new ProductDTO();
         productDTO.setCategory(ProductCategoryDAOImpl.mapToDTO(productEntity.getCategory()));
-        productDTO.setId(productEntity.getId());
         productDTO.setDescription(productEntity.getDescription());
         productDTO.setId(productEntity.getId());
         productDTO.setImageUrl(productEntity.getImageUrl());
         productDTO.setName(productEntity.getName());
+        productDTO.setPrice(productEntity.getPrice());
         return productDTO;
     }
 }

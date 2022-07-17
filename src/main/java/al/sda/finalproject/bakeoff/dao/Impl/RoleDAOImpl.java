@@ -43,14 +43,12 @@ public class RoleDAOImpl implements RoleDAO {
         RoleEntity roleEntity = new RoleEntity();
         roleEntity.setRoleName(roleDTO.getRoleName());
         roleEntity.setId(roleDTO.getId());
-        roleEntity.setAuthorities(AuthorityDAOImpl.mapToEntity(roleDTO.getAuthorities()));
         return roleEntity;
     }
 
     public static RoleDTO mapToDTO(RoleEntity roleEntity){
         RoleDTO roleDTO = new RoleDTO();
         roleDTO.setRoleName(roleEntity.getRoleName());
-        roleDTO.setAuthorities(AuthorityDAOImpl.mapToDTO(roleEntity.getAuthorities()));
         roleDTO.setId(roleEntity.getId());
         return roleDTO;
     }

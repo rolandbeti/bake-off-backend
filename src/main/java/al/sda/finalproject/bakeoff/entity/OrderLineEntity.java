@@ -22,4 +22,7 @@ public class OrderLineEntity {
     private int quantity;
     @Column(name = "line_amount")
     private double lineAmount;
+    @ManyToOne
+    @JoinColumn(name = "order_id")
+    private OrderEntity orderEntity;
 }

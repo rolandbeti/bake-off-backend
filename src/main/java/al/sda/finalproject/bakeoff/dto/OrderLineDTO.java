@@ -17,4 +17,5 @@ public class OrderLineDTO {
     private ProductDTO product;
     private int quantity;
     private double lineAmount;
+    private OrderDTO order;
 }

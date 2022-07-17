@@ -1,8 +1,6 @@
 package al.sda.finalproject.bakeoff.controller;
 
-import al.sda.finalproject.bakeoff.dto.AuthorityDTO;
 import al.sda.finalproject.bakeoff.dto.CustomerDTO;
-import al.sda.finalproject.bakeoff.service.AuthorityService;
 import al.sda.finalproject.bakeoff.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

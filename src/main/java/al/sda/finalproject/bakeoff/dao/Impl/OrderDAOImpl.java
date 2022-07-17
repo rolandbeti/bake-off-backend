@@ -45,7 +45,6 @@ public class OrderDAOImpl implements OrderDAO {
     public static OrderEntity mapToEntity(OrderDTO orderDTO){
         OrderEntity orderEntity = new OrderEntity();
         orderEntity.setOrderDate(orderDTO.getOrderDate());
-        orderEntity.setOrderLines(orderDTO.getOrderLines());
         orderEntity.setId(orderDTO.getId());
         orderEntity.setCustomer(orderDTO.getCustomer());
         orderEntity.setTotalAmount(orderDTO.getTotalAmount());
@@ -55,7 +54,6 @@ public class OrderDAOImpl implements OrderDAO {
     public static OrderDTO mapToDTO(OrderEntity orderEntity){
         OrderDTO orderDTO = new OrderDTO();
         orderDTO.setOrderDate(orderEntity.getOrderDate());
-        orderDTO.setOrderLines(orderEntity.getOrderLines());
         orderDTO.setCustomer(orderEntity.getCustomer());
         orderDTO.setId(orderEntity.getId());
         orderDTO.setTotalAmount(orderEntity.getTotalAmount());

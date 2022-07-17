@@ -4,9 +4,11 @@ import al.sda.finalproject.bakeoff.dao.ProductCategoryDAO;
 import al.sda.finalproject.bakeoff.dto.ProductCategoryDTO;
 import al.sda.finalproject.bakeoff.service.ProductCategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class ProductCategoryServiceImpl implements ProductCategoryService {
 
     private ProductCategoryDAO productCategoryDAO;
